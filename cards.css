@@ -1,0 +1,97 @@
+.tilt {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255,255,255,.042), rgba(255,255,255,.014));
+  box-shadow: 0 30px 100px rgba(0,0,0,.30);
+  overflow: hidden;
+}
+.card-pad { padding: 30px; }
+.stat-card {
+  padding: 20px;
+  min-height: 130px;
+}
+.stat-card strong {
+  display: block;
+  margin-top: 10px;
+  font-size: clamp(1.8rem, 3vw, 2.9rem);
+  letter-spacing: -.06em;
+}
+.stat-card span {
+  color: var(--muted-2);
+  font-size: .66rem;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.power {
+  position: relative;
+  min-height: 330px;
+  padding: 26px;
+}
+.power::after {
+  content: "";
+  position: absolute;
+  width: 220px; height: 220px;
+  right: -110px; top: -110px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,33,54,.24), transparent 66%);
+  filter: blur(10px);
+}
+.power-num { color: rgba(255,255,255,.20); font-size: .72rem; font-weight: 900; letter-spacing: .14em; }
+.power h3 { margin: 92px 0 9px; font-size: 1.35rem; letter-spacing: -.03em; }
+.power p { margin: 0; color: var(--muted); line-height: 1.7; }
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 0;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 61px; top: 0; bottom: 0;
+  width: 1px;
+  background: linear-gradient(var(--red), rgba(255,33,54,.08));
+}
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 120px minmax(0,1fr);
+  gap: 24px;
+  padding: 32px 0;
+  border-top: 1px solid var(--line);
+}
+.timeline-item:last-child { border-bottom: 1px solid var(--line); }
+.timeline-year {
+  position: relative;
+  z-index: 2;
+  color: var(--red-2);
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+.timeline-year::after {
+  content: "";
+  position: absolute;
+  right: 48px; top: 2px;
+  width: 11px; height: 11px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--red);
+  box-shadow: 0 0 18px rgba(255,33,54,.55);
+}
+.timeline-item h3 { margin: 0 0 8px; font-size: 1.25rem; }
+.timeline-item p { margin: 0; color: var(--muted); line-height: 1.75; }
+.quote {
+  margin: 0;
+  padding: 32px;
+  border-left: 2px solid var(--red);
+  background: linear-gradient(90deg, rgba(255,33,54,.07), transparent);
+  color: #ececf4;
+  font-size: clamp(1.25rem, 2.4vw, 2rem);
+  line-height: 1.5;
+  letter-spacing: -.035em;
+}
