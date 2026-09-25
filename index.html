@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#030307">
+  <meta name="description" content="SHADOW // ULTIMATE LIFEFORM — cinematic interactive archive.">
+  <title>SHADOW // ULTIMATE LIFEFORM</title>
+</head>
+<body data-parallax-scene>
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-top"><span>CHAOS SYSTEM // BOOT</span><span>V5.0</span></div>
+      <div class="loader-line"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <div class="progress" data-progress></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <span class="brand-mark"></span>
+        <span>SHADOW // ARCHIVE</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navegação">
+        <a href="#story">01 História</a>
+        <a href="#powers">02 Poderes</a>
+        <a href="#media">03 Trailer</a>
+        <a href="#gallery">04 Gallery</a><a href="#dossier">05 Dossier</a>
+      </nav>
+
+      <div class="hud-toggle">
+        <span class="mode-label" data-mode-label>Normal Mode</span>
+        <button class="btn btn-icon btn-danger" data-chaos-mode aria-pressed="false" title="Ativar Chaos Mode">⌁</button>
+        <button class="btn btn-icon" data-audio-toggle aria-pressed="false" title="Som">◌</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <canvas class="hero-canvas" id="particle-canvas" aria-hidden="true"></canvas>
+      <video class="hero-video" data-hero-video muted autoplay loop playsinline preload="metadata" poster="./src/assets/images/trailer-poster.jpg"><source src="./src/assets/video/chaos-loop.mp4" type="video/mp4"></video>
+      <div class="hero-image" data-parallax-target></div>
+      <div class="hero-overlay"></div>
+      <div class="scan"></div>
+
+      <div class="container hero-content">
+        <div class="hero-layout">
+          <div class="reveal is-visible">
+            <div class="hero-kicker">
+              <span class="status-dot"></span>
+              PROJECT SHADOW // CLASSIFIED
+            </div>
+
+            <h1 class="glitch" data-text="SHADOW">
+              <span>SHADOW</span>
+            </h1>
+
+            <p class="hero-lead">
+              Uma experiência web cinematográfica construída para parecer um arquivo secreto vivo:
+              profundidade 3D, partículas, vídeo, HUD, glitch, timeline, poderes, galeria e modo Chaos Control.
+            </p>
+
+            <div class="hero-meta">
+              <span class="chip">Ultimate Lifeform</span>
+              <span class="chip">Chaos Control</span>
+              <span class="chip">Doom Powers</span>
+            </div>
+
+            <div class="btn-row">
+              <a class="btn btn-primary" href="#story">Entrar no arquivo →</a>
+              <a class="btn" href="#media">Abrir transmissão</a>
+            </div>
+
+            <div class="hero-scroll"><i></i> SCROLL TO DESCEND</div>
+          </div>
+
+          <aside class="card hud hud-corner hero-panel tilt reveal is-visible" data-tilt>
+            <div class="scan"></div>
+            <div class="panel-row"><span>Status</span><strong><span class="status-dot"></span> ACTIVE</strong></div>
+            <div class="panel-row"><span>Origin</span><strong>SPACE COLONY ARK</strong></div>
+            <div class="panel-row"><span>Alias</span><strong>ULTIMATE LIFEFORM</strong></div>
+            <div class="panel-row"><span>Core</span><strong>CHAOS CONTROL</strong></div>
+            <div class="panel-row"><span>Signal</span><strong>LOCKED</strong></div>
+            <div class="pulse-line"></div>
+          </aside>
+        </div>
+
+        <div class="core float reveal is-visible" data-core aria-hidden="true">
+          <div class="ring"></div>
+          <div class="ring r2"></div>
+          <div class="ring r3"></div>
+          <img src="./src/assets/icons/chaos-core.svg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="section media-command" id="media-command">
+      <div class="container">
+        <div class="section-head reveal is-visible">
+          <div>
+            <div class="section-kicker">00 // MEDIA COMMAND CENTER</div>
+            <h2 class="section-title">IMAGENS<br>EM QUADRINHOS</h2>
+          </div>
+          <p class="section-copy">
+            Agora tudo fica visível: fotos, frames do seu vídeo, arte do Shadow, cartões de dados e
+            dois players locais. Clique nas fotos para abrir em tela grande.
+          </p>
+        </div>
+
+        <div class="media-bento">
+          <article class="media-card media-card--hero card hud hud-corner tilt reveal is-visible" data-tilt>
+            <img src="./src/assets/images/shadow-hero.png" alt="Shadow em uma cidade futurista" loading="eager">
+            <div class="media-card__glow"></div>
+            <div class="media-card__content">
+              <span>MAIN ART // SHADOW</span>
+              <h3>ULTIMATE LIFEFORM</h3>
+              <button class="mini-btn" data-lightbox="./src/assets/images/shadow-hero.png">ABRIR FOTO ↗</button>
+            </div>
+          </article>
+
+          <article class="media-card card hud hud-corner tilt reveal is-visible" data-tilt>
+            <img src="./src/assets/images/frames/frame-01.jpg" alt="Frame 01 do vídeo enviado" loading="lazy">
+            <div class="media-card__content"><span>FRAME 01</span><h3>FIRST SIGNAL</h3><button class="mini-btn" data-lightbox="./src/assets/images/frames/frame-01.jpg">VER FOTO</button></div>
+          </article>
+          <article class="media-card card hud hud-corner tilt reveal is-visible" data-tilt>
+            <img src="./src/assets/images/frames/frame-02.jpg" alt="Frame 02 do vídeo enviado" loading="lazy">
+            <div class="media-card__content"><span>FRAME 02</span><h3>CHAOS SURGE</h3><button class="mini-btn" data-lightbox="./src/assets/images/frames/frame-02.jpg">VER FOTO</button></div>
+          </article>
+          <article class="media-card card hud hud-corner tilt reveal is-visible" data-tilt>
+            <img src="./src/assets/images/frames/frame-03.jpg" alt="Frame 03 do vídeo enviado" loading="lazy">
+            <div class="media-card__content"><span>FRAME 03</span><h3>DARK HORIZON</h3><button class="mini-btn" data-lightbox="./src/assets/images/frames/frame-03.jpg">VER FOTO</button></div>
+          </article>
+          <article class="media-card card hud hud-corner tilt reveal is-visible" data-tilt>
+            <img src="./src/assets/images/frames/frame-04.jpg" alt="Frame 04 do vídeo enviado" loading="lazy">
+            <div class="media-card__content"><span>FRAME 04</span><h3>RED SIGNAL</h3><button class="mini-btn" data-lightbox="./src/assets/images/frames/frame-04.jpg">VER FOTO</button></div>
+          </article>
+          <article class="media-card card hud hud-corner tilt reveal is-visible" data-tilt>
+            <img src="./src/assets/images/frames/frame-05.jpg" alt="Frame 05 do vídeo enviado" loading="lazy">
+            <div class="media-card__content"><span>FRAME 05</span><h3>FINAL APPROACH</h3><button class="mini-btn" data-lightbox="./src/assets/images/frames/frame-05.jpg">VER FOTO</button></div>
+          </article>
+          <article class="media-card card hud hud-corner tilt reveal is-visible" data-tilt>
+            <img src="./src/assets/images/frames/frame-06.jpg" alt="Frame 06 do vídeo enviado" loading="lazy">
+            <div class="media-card__content"><span>FRAME 06</span><h3>END SIGNAL</h3><button class="mini-btn" data-lightbox="./src/assets/images/frames/frame-06.jpg">VER FOTO</button></div>
+          </article>
+
+          <article class="data-card card hud hud-corner tilt reveal is-visible" data-tilt>
+            <div class="data-icon">◆</div>
+            <span>ARCHIVE BLOCK</span>
+            <strong>06</strong>
+            <small>FRAMES EXTRAÍDOS</small>
+          </article>
+          <article class="data-card card hud hud-corner tilt reveal is-visible" data-tilt>
+            <div class="data-icon">◉</div>
+            <span>MEDIA BLOCK</span>
+            <strong>02</strong>
+            <small>VÍDEOS LOCAIS</small>
+          </article>
+          <article class="data-card card hud hud-corner tilt reveal is-visible" data-tilt>
+            <div class="data-icon">✦</div>
+            <span>VISUAL BLOCK</span>
+            <strong>08+</strong>
+            <small>PEÇAS VISUAIS</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="story">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">01 // ORIGIN LOG</div>
+            <h2 class="section-title">HISTÓRIA<br>EM SOMBRAS</h2>
+          </div>
+          <p class="section-copy">
+            Shadow foi criado por Professor Gerald Robotnik na Space Colony ARK como uma forma
+            de vida de capacidades extraordinárias. Sua história está ligada a Maria, à ARK e
+            à construção de uma identidade própria.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card hud hud-corner section-visual tilt reveal" data-tilt>
+            <div class="corner-readout">MEMORY FRAGMENT // 001</div>
+            <div class="visual-tag">ARK / CLASSIFIED</div>
+            <h3>Do experimento ao próprio destino.</h3>
+            <p>
+              Ao longo dos jogos, Shadow encara conflitos de memória, rivalidades e escolhas.
+              A narrativa de Sonic X Shadow Generations também revisita elementos do passado
+              enquanto coloca novas habilidades em foco.
+            </p>
+          </article>
+
+          <article class="card hud hud-corner card-pad reveal">
+            <div class="section-kicker">TIMELINE // REPLAY</div>
+            <div class="timeline" style="margin-top:14px">
+              <div class="timeline-item">
+                <div class="timeline-year">ARK</div>
+                <div><h3>Criação</h3><p>Gerald Robotnik desenvolve Shadow na Space Colony ARK como uma forma de vida extraordinária.</p></div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-year">MARIA</div>
+                <div><h3>Memória</h3><p>A ligação com Maria se torna uma parte central da memória e dos dilemas que acompanham Shadow.</p></div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-year">NOW</div>
+                <div><h3>Identidade</h3><p>Shadow continua definindo seu caminho por meio de confrontos, alianças e decisões próprias.</p></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="powers">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">02 // SYSTEMS</div>
+            <h2 class="section-title">PODERES<br>ATIVOS</h2>
+          </div>
+          <p class="section-copy">
+            Uma leitura visual das habilidades mais associadas a Shadow, agora com barras de energia,
+            microinterações e cartões 3D que reagem ao cursor.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card power hud hud-corner tilt reveal" data-tilt>
+            <div class="power-num">01 / CHAOS SYSTEM</div>
+            <h3>Chaos Control</h3>
+            <p>Manipulação de espaço-tempo associada ao poder das Chaos Emeralds.</p>
+            <div class="chaos-meter">
+              <div class="meter-row"><span>Control</span><span>99%</span></div>
+              <div class="meter"><i data-meter="99"></i></div>
+            </div>
+          </article>
+
+          <article class="card power hud hud-corner tilt reveal" data-tilt>
+            <div class="power-num">02 / CHAOS SPEAR</div>
+            <h3>Chaos Spear</h3>
+            <p>Projéteis de energia usados por Shadow em combate.</p>
+            <div class="chaos-meter">
+              <div class="meter-row"><span>Impact</span><span>94%</span></div>
+              <div class="meter"><i data-meter="94"></i></div>
+            </div>
+          </article>
+
+          <article class="card power hud hud-corner tilt reveal" data-tilt>
+            <div class="power-num">03 / DOOM SYSTEM</div>
+            <h3>Doom Powers</h3>
+            <p>Novas capacidades apresentadas em Sonic X Shadow Generations.</p>
+            <div class="chaos-meter">
+              <div class="meter-row"><span>Output</span><span>97%</span></div>
+              <div class="meter"><i data-meter="97"></i></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="grid-4" style="margin-top:16px">
+          <div class="card stat-card hud hud-corner reveal"><span>Official height</span><strong><span data-count="100">0</span> cm</strong><span>PROFILE DATA</span></div>
+          <div class="card stat-card hud hud-corner reveal"><span>Official weight</span><strong><span data-count="35">0</span> kg</strong><span>PROFILE DATA</span></div>
+          <div class="card stat-card hud hud-corner reveal"><span>Chaos control</span><strong>∞</strong><span>SYSTEM LIMIT</span></div>
+          <div class="card stat-card hud hud-corner reveal"><span>Signal state</span><strong>01</strong><span>ACTIVE TARGET</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="media">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">03 // TRANSMISSION</div>
+            <h2 class="section-title">TRAILER<br>LOCAL</h2>
+          </div>
+          <p class="section-copy">
+            O vídeo que você enviou agora faz parte do site. Nada de iframe externo: o trailer é
+            carregado diretamente como vídeo HTML5, com controles próprios e poster cinematográfico.
+          </p>
+        </div>
+
+        <div class="card hud hud-corner media-wrap reveal">
+          <div class="video-box">
+            <video data-trailer preload="metadata" poster="./src/assets/images/trailer-poster.jpg">
+              <source src="./src/assets/video/videoplayback.mp4" type="video/mp4">
+              Seu navegador não suporta vídeo HTML5.
+            </video>
+            <div class="scan"></div>
+          </div>
+          <div class="video-ui">
+            <div class="video-ui-left">
+              <button class="video-btn" data-play aria-label="Reproduzir ou pausar">▶</button>
+              <button class="video-btn" data-mute aria-label="Ativar ou desativar som">🔇</button>
+            </div>
+            <input class="scrub" type="range" min="0" value="0" step="0.1" data-scrub aria-label="Progresso do vídeo">
+            <span class="video-time" data-time>00:00 / 00:00</span>
+          </div>
+        </div>
+
+        <div class="grid-2 local-video-grid reveal" style="margin-top:16px">
+          <article class="card hud hud-corner mini-video-card">
+            <div class="mini-video-head"><span>VIDEO 01 // TRAILER LOCAL</span><b>MP4</b></div>
+            <video controls preload="metadata" poster="./src/assets/images/trailer-poster.jpg">
+              <source src="./src/assets/video/videoplayback.mp4" type="video/mp4">
+            </video>
+          </article>
+          <article class="card hud hud-corner mini-video-card">
+            <div class="mini-video-head"><span>VIDEO 02 // CHAOS LOOP</span><b>LOOP</b></div>
+            <video controls muted autoplay loop playsinline preload="metadata" poster="./src/assets/images/trailer-poster.jpg">
+              <source src="./src/assets/video/chaos-loop.mp4" type="video/mp4">
+            </video>
+          </article>
+        </div>
+
+        <div class="grid-4 media-stats reveal" style="margin-top:16px">
+          <div class="card hud stat-card"><span>Duração</span><strong>01:59</strong><span>LOCAL MEDIA</span></div>
+          <div class="card hud stat-card"><span>Formato</span><strong>MP4</strong><span>H.264 / AAC</span></div>
+          <div class="card hud stat-card"><span>Resolução</span><strong>640×360</strong><span>ORIGINAL FILE</span></div>
+          <div class="card hud stat-card"><span>Origem</span><strong>USER</strong><span>UPLOADED ASSET</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">04 // VISUAL FRAMES</div>
+            <h2 class="section-title">GALLERY<br>MODE</h2>
+          </div>
+          <p class="section-copy">
+            Separei três frames do vídeo enviado e transformei cada momento em uma peça visual do
+            arquivo. Os cards têm profundidade, hover e tratamento cinematográfico.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card gallery-item hud hud-corner tilt reveal" data-tilt>
+            <div class="gallery-image frame-1"></div><div class="gallery-gradient"></div>
+            <div class="gallery-copy"><span>FRAME 01 // ENCOUNTER</span><h3>FIRST SIGNAL</h3></div>
+          </article>
+          <article class="card gallery-item hud hud-corner tilt reveal" data-tilt>
+            <div class="gallery-image frame-2"></div><div class="gallery-gradient"></div>
+            <div class="gallery-copy"><span>FRAME 02 // CHAOS</span><h3>POWER SURGE</h3></div>
+          </article>
+          <article class="card gallery-item hud hud-corner tilt reveal" data-tilt>
+            <div class="gallery-image frame-3"></div><div class="gallery-gradient"></div>
+            <div class="gallery-copy"><span>FRAME 03 // FINAL</span><h3>DARK HORIZON</h3></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="dossier">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">05 // CHARACTER DOSSIER</div>
+            <h2 class="section-title">DADOS<br>DO ALVO</h2>
+          </div>
+          <p class="section-copy">
+            Uma camada extra de interface para transformar a landing page em uma experiência de arquivo:
+            dados, status, perfil, sinais e uma leitura visual de operação.
+          </p>
+        </div>
+
+        <div class="dossier">
+          <div class="card hud dossier-visual reveal">
+            <div class="inside">
+              <div class="chip">TARGET // SHADOW</div>
+              <h3>ULTIMATE LIFEFORM</h3>
+              <p>Registro visual baseado no personagem e no material audiovisual usado neste projeto.</p>
+            </div>
+          </div>
+
+          <div class="card hud card-pad reveal">
+            <div class="dossier-grid">
+              <div class="dossier-row"><small>CODENAME</small><b>SHADOW</b></div>
+              <div class="dossier-row"><small>ORIGIN</small><b>SPACE COLONY ARK</b></div>
+              <div class="dossier-row"><small>CORE ABILITY</small><b>CHAOS CONTROL</b></div>
+              <div class="dossier-row"><small>SPECIAL SYSTEM</small><b>DOOM POWERS</b></div>
+              <div class="dossier-row"><small>PROFILE</small><b>100 CM / 35 KG</b></div>
+              <div class="dossier-row"><small>ARCHIVE STATE</small><b>ACTIVE / LOCKED</b></div>
+            </div>
+            <div class="hairline" style="margin:24px 0"></div>
+            <div class="section-kicker">MISSION NOTE</div>
+            <blockquote class="quote" style="margin-top:18px">
+              O passado explica o que aconteceu. O próximo passo define quem Shadow escolhe ser.
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card hud hud-corner card-pad reveal">
+          <div class="section-kicker">FINAL TRANSMISSION</div>
+          <blockquote class="quote">
+            “O passado explica o que aconteceu. O próximo passo define quem Shadow escolhe ser.”
+          </blockquote>
+          <div class="btn-row" style="margin-top:24px">
+            <a class="btn btn-primary" href="#top">↑ Voltar ao topo</a>
+            <a class="btn" href="https://sonic.sega.jp/SonicChannel/character/shadow.html" target="_blank" rel="noopener noreferrer">Arquivo oficial SEGA</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer footer-zjuicex">
+    <div class="container footer-signature">
+      <div>
+        <span class="footer-kicker">DEVELOPER / CREATOR</span>
+        <div class="creator-name">ZJuiceX</div>
+        <p>SHADOW // ARCHIVE — experiência cinematográfica web.</p>
+      </div>
+      <div class="footer-meta">
+        <span>V8 // CINEMATIC SYSTEM</span>
+        <span>LOCAL MEDIA // ACTIVE</span>
+        <span>CHAOS CORE // ONLINE</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./src/js/main.js"></script>
+</body>
+</html>

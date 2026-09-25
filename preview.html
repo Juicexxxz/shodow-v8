@@ -1,0 +1,121 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>SHADOW // ZJuiceX</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#030307;color:#fff;font-family:system-ui,-apple-system,Segoe UI,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:20;opacity:.12;background-image:linear-gradient(#fff1 1px,transparent 1px),linear-gradient(90deg,#fff1 1px,transparent 1px);background-size:32px 32px}
+header{position:fixed;z-index:100;inset:0 0 auto;padding:17px 28px;background:linear-gradient(#030307ed,#03030755,transparent)}nav{max-width:1360px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:18px}nav b{font-size:12px;letter-spacing:.1em}nav a{margin-left:20px;color:#b9bac4;text-decoration:none;font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.hero{min-height:100svh;position:relative;display:grid;align-items:center;overflow:hidden}.hero-bg{position:absolute;inset:-4%;background:linear-gradient(90deg,#030307 0%,#030307d9 30%,#0303072c 70%,#030307a6),linear-gradient(180deg,#0002,transparent 45%,#030307),url("./src/assets/images/shadow-hero.png") 72% center/cover;animation:zoom 15s ease-in-out infinite alternate}.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.26;filter:brightness(.55);mix-blend-mode:screen}.hero-content{position:relative;z-index:5;width:min(1360px,calc(100% - 48px));margin:auto;padding-top:120px}.kicker{color:#ff6773;font-size:10px;font-weight:950;letter-spacing:.20em;text-transform:uppercase}.hero h1{margin:16px 0;font-size:clamp(5rem,15vw,13rem);line-height:.72;letter-spacing:-.10em}.hero p{max-width:670px;color:#d0d1d9;line-height:1.75}.btn{display:inline-flex;margin:10px 8px 0 0;padding:14px 17px;border:1px solid #fff2;border-radius:14px;background:#fff0;color:#fff;text-decoration:none;font-size:10px;font-weight:950;letter-spacing:.1em}.primary{background:linear-gradient(135deg,#ff3046,#b50d1d);box-shadow:0 18px 48px #ff263c25}.panel{position:absolute;right:4%;bottom:11%;z-index:8;width:min(360px,calc(100% - 48px));padding:20px;border:1px solid #fff1;border-radius:23px;background:#090910bb;backdrop-filter:blur(15px)}.row{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid #fff1;color:#9698a4;font-size:10px}.row:last-child{border:0}.row b{color:#fff}.section{width:min(1360px,calc(100% - 48px));margin:auto;padding:120px 0}.section h2{font-size:clamp(3rem,7vw,7rem);line-height:.84;letter-spacing:-.075em;margin:8px 0 35px}.muted{color:#9da0ad;line-height:1.8}.wall{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}.card{position:relative;overflow:hidden;border:1px solid #fff1;border-radius:21px;background:#07070c;min-height:230px}.card.big{grid-column:span 6;grid-row:span 2;min-height:490px}.card.mid{grid-column:span 3}.card img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .7s}.card:hover img{transform:scale(1.08)}.card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0000 28%,#000e 100%);pointer-events:none}.ct{position:absolute;z-index:4;left:0;right:0;bottom:0;padding:19px}.ct small{color:#a6a7b2;font-size:9px;font-weight:900;letter-spacing:.13em}.ct h3{margin:6px 0;font-size:18px}.video-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:16px}.video{overflow:hidden;border:1px solid #fff1;border-radius:22px;background:#060609}.vh{display:flex;justify-content:space-between;padding:13px 16px;color:#858793;font-size:9px;font-weight:900;letter-spacing:.12em}.vh b{color:#ff6371}.video video{width:100%;display:block;background:#000}.vcopy{padding:17px}.vcopy h3{margin:0 0 7px;font-size:19px}.vcopy p{margin:0;color:#9799a5;line-height:1.65;font-size:11px}.twocol{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.story{min-height:540px;position:relative;overflow:hidden;border-radius:23px;background:linear-gradient(180deg,#0000,#000e),url("./src/assets/images/scene-01.jpg") center/cover}.story .inside{position:absolute;left:0;right:0;bottom:0;padding:28px}.story h3{font-size:38px;line-height:.9;margin:8px 0}.timeline{padding:25px;border:1px solid #fff1;border-radius:23px;background:#fff1}.item{padding:23px 0;border-top:1px solid #fff1}.item:first-child{border-top:0}.item strong{color:#ff6874;font-size:10px;letter-spacing:.13em}.item h4{margin:7px 0;font-size:18px}.item p{margin:0;color:#9698a4;line-height:1.7;font-size:12px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.stat{padding:20px;border:1px solid #fff1;border-radius:19px;background:#fff1}.stat span{color:#727480;font-size:9px;font-weight:900;letter-spacing:.12em}.stat strong{display:block;font-size:28px;margin-top:9px}.signature{padding:95px 0 60px;border-top:1px solid #fff1;text-align:center}.signature small{color:#777985;font-size:10px;font-weight:950;letter-spacing:.2em}.z{font-size:clamp(5rem,16vw,13rem);line-height:.72;letter-spacing:-.1em;font-weight:1000;background:linear-gradient(95deg,#fff,#ff5463,#8b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent;margin:18px 0 8px}.light{position:fixed;inset:0;z-index:200;display:none;place-items:center;background:#000e;padding:20px}.light.open{display:grid}.light img{max-width:95vw;max-height:90vh;border-radius:16px}.close{position:absolute;right:20px;top:18px;color:#fff;background:#fff1;border:1px solid #fff2;border-radius:10px;padding:9px 12px}.footer{text-align:center;color:#6f717c;padding:45px 20px 28px;font-size:10px}
+@keyframes zoom{to{transform:scale(1.055)}}@media(max-width:850px){nav a{display:none}.panel{position:relative;right:auto;bottom:auto;margin:35px auto;width:min(410px,calc(100% - 34px))}.hero-content{padding-top:140px}.video-grid,.twocol{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.card.big{grid-column:span 12}.card.mid{grid-column:span 6}}@media(max-width:520px){.section{padding:90px 0;width:min(1360px,calc(100% - 26px))}.wall{grid-template-columns:1fr 1fr}.card.big,.card.mid{grid-column:span 1;min-height:240px}.card.big{grid-column:span 2;min-height:380px}.hero{min-height:930px}.hero-content{width:min(1360px,calc(100% - 26px))}}
+</style>
+</head>
+<body>
+<header><nav><b>SHADOW // ARCHIVE</b><div><a href="#photos">FOTOS</a><a href="#videos">VÍDEOS</a><a href="#story">HISTÓRIA</a><a href="#signature">ZJuiceX</a></div></nav></header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <video class="hero-video" muted autoplay loop playsinline preload="metadata"><source src="./src/assets/video/chaos-loop.mp4" type="video/mp4"></video>
+  <div class="hero-content">
+    <div class="kicker">PROJECT SHADOW // ZJUICEX</div>
+    <h1>SHADOW</h1>
+    <p>Uma página cinematográfica com fotos, frames do vídeo que você mandou, vídeos locais, história, poderes e uma assinatura final do desenvolvedor.</p>
+    <a class="btn primary" href="#photos">VER FOTOS ↓</a><a class="btn" href="#videos">VER VÍDEOS ↓</a>
+  </div>
+  <div class="panel">
+    <div class="row"><span>STATUS</span><b>ACTIVE</b></div>
+    <div class="row"><span>ORIGIN</span><b>SPACE COLONY ARK</b></div>
+    <div class="row"><span>CORE</span><b>CHAOS CONTROL</b></div>
+    <div class="row"><span>MEDIA</span><b>LOCAL + YOUTUBE</b></div>
+  </div>
+</section>
+
+<section class="section" id="photos">
+  <div class="kicker">01 // PHOTO WALL</div>
+  <h2>FOTOS &<br>QUADRINHOS</h2>
+  <p class="muted">Aqui estão a arte principal, frames extraídos do seu vídeo e outras imagens do projeto. Clique em “ABRIR” para ampliar.</p>
+  <div class="wall">
+    <article class="card big"><img src="./src/assets/images/shadow-hero.png"><div class="ct"><small>MAIN ART</small><h3>ULTIMATE LIFEFORM</h3><button class="btn" data-img="./src/assets/images/shadow-hero.png">ABRIR</button></div></article>
+    <article class="card mid"><img src="./src/assets/images/frames/frame-01.jpg"><div class="ct"><small>FRAME 01</small><h3>FIRST SIGNAL</h3><button class="btn" data-img="./src/assets/images/frames/frame-01.jpg">ABRIR</button></div></article>
+    <article class="card mid"><img src="./src/assets/images/frames/frame-02.jpg"><div class="ct"><small>FRAME 02</small><h3>CHAOS SURGE</h3><button class="btn" data-img="./src/assets/images/frames/frame-02.jpg">ABRIR</button></div></article>
+    <article class="card mid"><img src="./src/assets/images/frames/frame-03.jpg"><div class="ct"><small>FRAME 03</small><h3>DARK HORIZON</h3><button class="btn" data-img="./src/assets/images/frames/frame-03.jpg">ABRIR</button></div></article>
+    <article class="card mid"><img src="./src/assets/images/frames/frame-04.jpg"><div class="ct"><small>FRAME 04</small><h3>RED SIGNAL</h3><button class="btn" data-img="./src/assets/images/frames/frame-04.jpg">ABRIR</button></div></article>
+    <article class="card mid"><img src="./src/assets/images/frames/frame-05.jpg"><div class="ct"><small>FRAME 05</small><h3>FINAL APPROACH</h3><button class="btn" data-img="./src/assets/images/frames/frame-05.jpg">ABRIR</button></div></article>
+    <article class="card mid"><img src="./src/assets/images/frames/frame-06.jpg"><div class="ct"><small>FRAME 06</small><h3>END SIGNAL</h3><button class="btn" data-img="./src/assets/images/frames/frame-06.jpg">ABRIR</button></div></article>
+    <article class="card mid"><img src="./src/assets/images/scene-01.jpg"><div class="ct"><small>SCENE 01</small><h3>ARK CITY</h3><button class="btn" data-img="./src/assets/images/scene-01.jpg">ABRIR</button></div></article>
+    <article class="card mid"><img src="./src/assets/images/scene-02.jpg"><div class="ct"><small>SCENE 02</small><h3>RED MOON</h3><button class="btn" data-img="./src/assets/images/scene-02.jpg">ABRIR</button></div></article>
+    <article class="card mid"><img src="./src/assets/images/scene-03.jpg"><div class="ct"><small>SCENE 03</small><h3>DARK SIGNAL</h3><button class="btn" data-img="./src/assets/images/scene-03.jpg">ABRIR</button></div></article>
+  </div>
+</section>
+
+<section class="section" id="videos">
+  <div class="kicker">02 // VIDEO VAULT</div>
+  <h2>VÍDEOS<br>LOCAIS</h2>
+  <p class="muted">Os vídeos agora ficam dentro da própria página, sem depender do player do YouTube.</p>
+  <div class="video-grid">
+    <article class="video">
+      <div class="vh"><span>VIDEO 01 // SEU ARQUIVO</span><b>MP4</b></div>
+      <video controls preload="metadata" poster="./src/assets/images/trailer-poster.jpg"><source src="./src/assets/video/videoplayback.mp4" type="video/mp4"></video>
+      <div class="vcopy"><h3>VÍDEO ENVIADO</h3><p>O arquivo `videoplayback.mp4` que você enviou está incorporado diretamente.</p></div>
+    </article>
+    <article class="video">
+      <div class="vh"><span>VIDEO 02 // CHAOS LOOP</span><b>LOOP</b></div>
+      <video controls muted autoplay loop playsinline preload="metadata" poster="./src/assets/images/trailer-poster.jpg"><source src="./src/assets/video/chaos-loop.mp4" type="video/mp4"></video>
+      <div class="vcopy"><h3>CHAOS LOOP</h3><p>Loop visual curto usado na atmosfera do hero.</p></div>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="story">
+  <div class="kicker">03 // STORY ARCHIVE</div>
+  <h2>HISTÓRIA<br>EM SOMBRAS</h2>
+  <div class="twocol">
+    <div class="story"><div class="inside"><div class="kicker">MEMORY FRAGMENT</div><h3>DA ARK<br>AO PRÓPRIO DESTINO</h3><p class="muted">Shadow foi criado por Professor Gerald Robotnik na Space Colony ARK. Sua história está ligada a Maria, à memória, a conflitos e à construção de uma identidade própria.</p></div></div>
+    <div class="timeline">
+      <div class="item"><strong>ARK</strong><h4>Criação</h4><p>Gerald Robotnik desenvolve Shadow como uma forma de vida extraordinária.</p></div>
+      <div class="item"><strong>MARIA</strong><h4>Memória</h4><p>A relação com Maria se torna parte central da trajetória do personagem.</p></div>
+      <div class="item"><strong>CHAOS</strong><h4>Poder</h4><p>Chaos Emeralds e técnicas como Chaos Control entram no centro de sua identidade de combate.</p></div>
+      <div class="item"><strong>NOW</strong><h4>Escolha</h4><p>Shadow continua definindo seu caminho por meio de conflitos, alianças e decisões próprias.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="kicker">04 // DOSSIER</div>
+  <h2>DADOS<br>DO ARQUIVO</h2>
+  <div class="stats">
+    <div class="stat"><span>ALTURA</span><strong>100 cm</strong></div>
+    <div class="stat"><span>PESO</span><strong>35 kg</strong></div>
+    <div class="stat"><span>CORE</span><strong>CHAOS</strong></div>
+    <div class="stat"><span>STATUS</span><strong>ACTIVE</strong></div>
+  </div>
+</section>
+
+<section class="section" id="signature">
+  <div class="signature">
+    <small>DEVELOPER / CREATOR</small>
+    <div class="z">ZJuiceX</div>
+    <p>SHADOW // ARCHIVE — CINEMATIC WEB EXPERIENCE</p>
+  </div>
+</section>
+
+<footer class="footer">ZJuiceX • Shadow 3D Project • Arquivos locais de imagem e vídeo incluídos no pacote.</footer>
+
+<div class="light" id="light"><button class="close" id="close">✕</button><img id="lightimg" alt="Imagem ampliada"></div>
+
+<script>
+document.querySelectorAll('[data-img]').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.getElementById('lightimg').src=btn.dataset.img;
+    document.getElementById('light').classList.add('open');
+  });
+});
+document.getElementById('close').onclick=()=>document.getElementById('light').classList.remove('open');
+document.getElementById('light').onclick=e=>{if(e.target.id==='light')e.currentTarget.classList.remove('open')};
+window.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('light').classList.remove('open')});
+</script>
+</body>
+</html>
